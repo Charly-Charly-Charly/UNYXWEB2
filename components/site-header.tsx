@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Menu, X, ShoppingBag } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useCart } from "@/lib/cart-context";
 import Image from "next/image";
@@ -32,9 +32,7 @@ export function SiteHeader() {
     <header
       className={cn(
         "sticky top-0 z-50 border-b transition-colors duration-300",
-        solid
-          ? "border-white/10 bg-primary/95 backdrop-blur-md"
-          : "border-transparent bg-transparent",
+        solid ? "bg-neutral-800" : "border-transparent bg-transparent",
       )}
     >
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -65,8 +63,8 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="#contacto"
-            className="rounded-full bg-accent px-5 py-2.5 text-sm font-medium text-accent-foreground transition-opacity hover:opacity-90"
+            href="https://shop.unyxgt.com"
+            className="rounded-full bg-white px-5 py-2.5 text-sm font-medium text-black transition-opacity hover:opacity-90"
           >
             Tienda
           </a>

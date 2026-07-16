@@ -50,14 +50,57 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative">
+        <div className="relative min-h-[380px] md:min-h-[460px]">
           <div className="absolute inset-0 -z-0 rounded-full bg-accent/10 blur-3xl" />
-          <div className="relative aspect-square overflow-hidden rounded-2xl">
+
+          <div
+            className="animate-float absolute left-0 top-2 aspect-square w-36 overflow-hidden  md:w-64 drop-shadow-[5px_5px_10px_rgba(0,0,0,0.75)]"
+            style={
+              {
+                animationDelay: "0s",
+                "--float-rotate": "-6deg",
+              } as React.CSSProperties
+            }
+          >
             <Image
-              src="/products/hero-charger.png"
+              src="/products/fl1.png"
               alt="Cargador GaN premium Ugreen"
               fill
               priority
+              className="object-cover"
+            />
+          </div>
+
+          <div
+            className="animate-float absolute right-4 top-24 aspect-square w-44 overflow-hidden  md:w-64  drop-shadow-[5px_5px_10px_rgba(0,0,0,0.75)]"
+            style={
+              {
+                animationDelay: "1.2s",
+                "--float-rotate": "4deg",
+              } as React.CSSProperties
+            }
+          >
+            <Image
+              src="/products/fl2.png"
+              alt="Audífonos inalámbricos"
+              fill
+              className="object-cover"
+            />
+          </div>
+
+          <div
+            className="animate-float absolute bottom-0 left-16 aspect-square w-32 overflow-hidden md:w-64  drop-shadow-[5px_5px_10px_rgba(0,0,0,0.75)]"
+            style={
+              {
+                animationDelay: "2.4s",
+                "--float-rotate": "3deg",
+              } as React.CSSProperties
+            }
+          >
+            <Image
+              src="/products/fl3.png"
+              alt="Power bank portátil"
+              fill
               className="object-cover"
             />
           </div>

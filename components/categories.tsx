@@ -19,7 +19,9 @@ export function Categories() {
           {categories.map((cat) => (
             <a
               key={cat.name}
-              href="#productos"
+              href={cat.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative flex items-center gap-4 overflow-hidden rounded-xl border border-border bg-card p-4 transition-colors hover:border-accent"
             >
               <div className="relative size-20 shrink-0 overflow-hidden rounded-lg bg-muted">

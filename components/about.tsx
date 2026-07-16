@@ -1,5 +1,5 @@
-import Image from "next/image"
-import { ShieldCheck, Truck, Headphones } from "lucide-react"
+import Image from "next/image";
+import { ShieldCheck, Truck, Headphones } from "lucide-react";
 
 const features = [
   {
@@ -17,7 +17,7 @@ const features = [
     title: "Asesoría experta",
     description: "Te ayudamos a elegir el accesorio correcto para tu setup.",
   },
-]
+];
 
 export function About() {
   return (
@@ -33,7 +33,9 @@ export function About() {
         </div>
 
         <div>
-          <p className="text-xs uppercase tracking-widest text-accent">Sobre nosotros</p>
+          <p className="text-xs uppercase tracking-widest text-neutral-300">
+            Sobre nosotros
+          </p>
           <h2 className="mt-2 text-balance font-serif text-4xl font-semibold leading-tight text-foreground md:text-5xl">
             Tecnología que dura, elegida con criterio
           </h2>
@@ -41,7 +43,8 @@ export function About() {
             En Unyx creemos que un buen accesorio no se nota: simplemente
             funciona, día tras día. Por eso seleccionamos cada producto pensando
             en durabilidad, rendimiento y diseño. Trabajamos principalmente con
-            Ugreen, una marca reconocida mundialmente por su ingeniería confiable.
+            Ugreen, una marca reconocida mundialmente por su ingeniería
+            confiable.
           </p>
 
           <div className="mt-10 grid gap-6">
@@ -62,5 +65,5 @@ export function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -14,6 +14,7 @@ type DisplayProduct = {
   image: string
   tag?: string
   description: string
+  link?: string
 }
 
 function shopifyToDisplay(p: ShopifyProduct): DisplayProduct {
@@ -30,6 +31,7 @@ function shopifyToDisplay(p: ShopifyProduct): DisplayProduct {
     image: p.featuredImage?.url ?? "/placeholder.svg",
     tag: p.tags[0],
     description: p.description,
+    link: `https://shop.unyxgt.com/products/${p.handle}`,
   }
 }
 
@@ -66,7 +68,12 @@ export async function FeaturedProducts() {
             key={product.id}
             className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-shadow hover:shadow-lg"
           >
-            <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+            <a
+              href={product.link ?? "#contacto"}
+              target={product.link ? "_blank" : undefined}
+              rel={product.link ? "noopener noreferrer" : undefined}
+              className="relative block aspect-[4/3] overflow-hidden bg-muted"
+            >
               <Image
                 src={product.image}
                 alt={product.name}
@@ -78,7 +85,7 @@ export async function FeaturedProducts() {
                   {product.tag}
                 </span>
               )}
-            </div>
+            </a>
             <div className="flex flex-1 flex-col p-5">
               <div className="flex items-center justify-between">
                 <span className="text-xs uppercase tracking-wider text-muted-foreground">
@@ -86,7 +93,14 @@ export async function FeaturedProducts() {
                 </span>
               </div>
               <h3 className="mt-2 font-serif text-xl font-semibold text-foreground">
-                {product.name}
+                <a
+                  href={product.link ?? "#contacto"}
+                  target={product.link ? "_blank" : undefined}
+                  rel={product.link ? "noopener noreferrer" : undefined}
+                  className="transition-colors hover:text-accent"
+                >
+                  {product.name}
+                </a>
               </h3>
               <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">
                 {product.description}
@@ -99,10 +113,12 @@ export async function FeaturedProducts() {
                   <AddToCartButton variantId={product.variantId} />
                 ) : (
                   <a
-                    href="#contacto"
+                    href={product.link ?? "#contacto"}
+                    target={product.link ? "_blank" : undefined}
+                    rel={product.link ? "noopener noreferrer" : undefined}
                     className="inline-flex items-center gap-1 text-sm font-medium text-primary transition-colors hover:text-accent"
                   >
-                    Consultar
+                    {product.link ? "Ver producto" : "Consultar"}
                     <ArrowUpRight className="size-4" />
                   </a>
                 )}

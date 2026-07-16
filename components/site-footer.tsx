@@ -1,7 +1,7 @@
 const columns = [
   {
     title: "Productos",
-    links: ["Cargadores", "Cables", "Power Banks", "Mouses", "Hubs", "Audio"],
+    links: ["Cargadores", "Cargadores de Carro", "Cables", "Baterías Portátiles", "Accesorios", "Audífonos"],
   },
   {
     title: "Empresa",
@@ -9,7 +9,7 @@ const columns = [
   },
   {
     title: "Contacto",
-    links: ["hola@nexvolt.com", "+502 1234 5678", "Ciudad de Guatemala"],
+    links: ["info@unyxgt.com", "+502 3722 6071", "Zona 10, Ciudad de Guatemala"],
   },
 ]
 

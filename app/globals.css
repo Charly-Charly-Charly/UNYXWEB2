@@ -168,3 +168,18 @@
     @apply font-sans;
   }
 }
+
+@layer utilities {
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(var(--float-rotate, 0deg));
+    }
+    50% {
+      transform: translateY(-18px) rotate(var(--float-rotate, 0deg));
+    }
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
